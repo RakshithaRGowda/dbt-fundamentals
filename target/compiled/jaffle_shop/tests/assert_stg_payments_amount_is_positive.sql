@@ -2,7 +2,7 @@ with
 
 payments as(
 
-    select * from {{ref('stg_payments')}}
+    select * from analytics.dbt_rr.stg_payments
 )
 
 select
