@@ -1,8 +1,8 @@
 with customers as (
-    select * from analytics.dbt_rr.stg_customers
+    select * from {{ ref('stg_customers')}}
 ),
 orders as (
-    select * from analytics.dbt_rr.fct_orders
+    select * from {{ ref('fct_orders')}}
 ),
 customer_orders as (
     select
